@@ -1,11 +1,14 @@
 #include <iostream>
 #include <cstdlib>
-using namespace std;
+
+const double PI = 3.14159;
 
 double unit_price (int diameter, double price);
+double unit_price (int length, int width, double price);
 // returns the price per square inch of a pizza.
 
 int main () {
+  using namespace std;
   int small_size_diameter;
   cout << "Please input the diameter of your pizza: ";
   cin >> small_size_diameter;
@@ -47,10 +50,13 @@ int main () {
 }
 
 double unit_price (int diameter, double price) {
-  const double PI = 3.14159;
   double radius, area;
   radius = static_cast<double> (diameter) / 2;
   area = PI * radius * radius;
+  return (price / area);
+}
 
+double unit_price (int length, int width, double price) {
+  double area = length * width;
   return (price / area);
 }
