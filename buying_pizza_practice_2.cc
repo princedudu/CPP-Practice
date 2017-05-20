@@ -40,11 +40,7 @@ int main () {
        << "Diameter: " << large_size_diameter << " inches; \n"
        << "Price: $" << large_size_price << " dollars.\n"
        << "Per square inch price: $" << unit_price_large << " dollars. \n\n";
-  if (unit_price_small <= unit_price_large) {
-    cout << "Small one is better for you. \n";
-  } else {
-    cout << "Large one is better for you. \n";
-  }
+  unit_price_small <= unit_price_large ? cout << "Small one is better for you. \n" : cout << "Large one is better for you. \n";
 
   return 0;
 }
